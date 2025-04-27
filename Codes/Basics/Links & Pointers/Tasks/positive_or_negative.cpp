@@ -1,20 +1,16 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
 
-	int a;
-	int b;
+	int number;
+	cout << "Enter number: ";
+	cin >> number;
 
-	cout << "Enter number a: ";
-	cin >> a;
-	cout << "Enter number b: ";
-	cin >> b;
+	int* ptr = &number;
 
-	int* ptrA = &a;
-	int* ptrB = &b;
-
-	cout << (*ptrA > *ptrB ? *ptrA : *ptrB);
+	cout << (*ptr > 0 ? "+" : (*ptr < 0 ? "-" : "zero"));
 
 	return 0;
 }
